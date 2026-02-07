@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <title>Corazon Vibrante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="heart">
+         <p>Soy como este corazón: vibrante por fuera, pero quién sabe qué está pasando por dentro. Probablemente caos. O calma. 🩷✨</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <script>
+        setInterval(() => {
+            confetti({
+                particleCount: 100,
+                spread: 60,
+                origin: { x: 0.5, y: 0.5 }
+            });
+        }, 2000);
+    </script>
+
+</body>
+</html>
