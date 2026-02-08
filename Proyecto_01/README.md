@@ -1,4 +1,4 @@
-# Mini Proyecto pensado para San Valentin
+# Corazon Vibrante San Valentin
 
 ## 1) Descripción del Proyecto
 
