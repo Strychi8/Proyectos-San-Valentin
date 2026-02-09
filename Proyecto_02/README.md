@@ -19,4 +19,3 @@ Pequeña galería de fotos con una estética romántica para celebrar el Día de
 - Animaciones: Definición de `@keyframes` (`slide`, `z-order`) y `animation-delay` para crear el efecto de carrusel; las animaciones manejan traslaciones, rotaciones y cambios de orden de apilamiento.
 
 ---
-
