@@ -24,14 +24,14 @@ Pequeña página web estática que muestra un corazón animado y vibrante en el 
 
 ## 4) Conceptos JavaScript y CSS aplicados
 
-- CSS:
+- **CSS**:
 	- Uso de pseudo-elementos `::before` y `::after` para crear los lóbulos (círculos) del corazón combinados con un cuadrado rotado.
 	- `transform: rotate(-45deg)` sobre el contenedor principal para formar la geometría del corazón; el texto se rota (45deg) para compensar y permanecer legible.
 	- `border-radius` para generar las formas circulares y `box-shadow` para añadir brillo/profundidad al diseño.
 	- `@keyframes` y `animation` para el efecto de pulso/latido (escala y suavizado de la transformación).
 	- `display: flex; justify-content: center; align-items: center;` para centrar la estructura y mantener el contenido alineado.
 
-- JavaScript:
+- **JavaScript**:
 	- Inclusión de `canvas-confetti` vía CDN y uso de `setInterval` para disparar efectos periódicos de confeti.
 	- Llamada a `confetti({...})` con opciones como `particleCount`, `spread` y `origin` para controlar la apariencia y la posición del efecto.
 	- Script inline simple (sin módulos ni bundlers), fácil de integrar; considerar controlar la frecuencia o desactivarlo en dispositivos con recursos limitados para ahorrar CPU/batería.

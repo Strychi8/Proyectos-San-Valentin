@@ -1,7 +1,7 @@
-# Decision SI/NO (V1)
+# Decision Si/No (v1)
 
 ## 1) Descripción del Proyecto
-- Página web pequeña e interactiva que plantea la pregunta "¿Te gustaría salir conmigo?" y ofrece dos opciones: "SI" y "NO". Está pensada como una demostración simple de interacción y estilos agradables.
+Página web pequeña e interactiva que plantea la pregunta "¿Te gustaría salir conmigo?" y ofrece dos opciones: "SI" y "NO". Está pensada como una demostración simple de interacción y estilos agradables.
 
 ## 2) Tecnologías Utilizadas
 - HTML5

@@ -1,17 +1,17 @@
 # Fantasmas Interactivos San Valentin
 
-1) Descripción del Proyecto
+## 1) Descripción del Proyecto
 
 Este proyecto crea una escena interactiva de fantasmas con estética de San Valentín. Los fantasmas flotan, parpadean y reaccionan a la interacción del usuario; aparecen mensajes y efectos (besos) animados para reforzar la experiencia visual.
 
-2) Tecnologías Utilizadas
+## 2) Tecnologías Utilizadas
 
 - HTML: estructura de la página y contenedores de los elementos interactivos.
 - CSS: estilos, animaciones (keyframes), pseudo-elementos y filtros visuales.
 - JavaScript: manipulación del DOM, eventos de usuario y control de animaciones dinámicas.
 - SVG inlined (data URI): detalles gráficos para formas repetidas en la falda del fantasma.
 
-3) Conceptos CSS y JavaScript aplicados
+## 3) Conceptos CSS y JavaScript aplicados
 
 **CSS**
 - **background-color**: Define el color de fondo del lienzo para crear contraste con los elementos rosados. Mejora la legibilidad y la atmósfera nocturna del diseño.
