@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  overflow: hidden;
+  font-family: "Arial", sans-serif;
+  cursor: pointer;
+  user-select: none; 
+  -webkit-user-select: none;
+}
+
+.ghost {
+  position: absolute;
+  width: 100px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: drop-shadow(0 0 15px rgba(255, 182, 193, 0.8));
+  transition: transform 0.3s;
+  animation: float 3s infinite ease-in-out;
+  z-index: 1;
+}
+
+.ghost::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  border-radius: 50% 50% 0 0;
+}
+
+.ghost::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: -5%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30"><path fill="%23FFF" d="M0 0 C20 30, 30 10, 50 20 S80 5, 100 0 Z"/></svg>')
+    repeat-x;
+  background-size: 100px 30px;
+  animation: wave 3s infinite linear;
+}
+
+.ghost .face {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  top: 30%;
+  left: 0;
+  z-index: 2;
+}
+
+.ghost .eyes {
+  position: absolute;
+  width: 60%;
+  left: 20%;
+  top: 15%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ghost .eye {
+  width: 20px;
+  height: 25px;
+  background: #333;
+  border-radius: 50%;
+  position: relative;
+  animation: blink 4s infinite;
+}
+
+.ghost .eye::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+}
+
+.ghost .mouth {
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  background: #333;
+  border-radius: 0 0 30px 30px;
+  left: 35%;
+  top: 55%;
+  transition: all 0.3s;
+}
+
+.ghost:hover {
+  transform: scale(1.1);
+}
+
+.ghost:hover .mouth {
+  height: 20px;
+  border-radius: 0 0 40px 40px;
+}
+
+.message {
+  position: absolute;
+  color: white;
+  background-color: rgba(255, 105, 180, 0.9);
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 14px;
+  text-align: center;
+  min-width: 120px;
+  max-width: 180px;
+  display: none;
+  z-index: 10;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: pulse 2s infinite;
+}
+
+.kiss {
+  position: absolute;
+  font-size: 28px;
+  animation: fly 1.5s forwards;
+  opacity: 0;
+  z-index: 5;
+  pointer-events: none;
+  filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.7));
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(-2deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 100px;
+  }
+}
+
+@keyframes blink {
+  0%,
+  48%,
+  52%,
+  100% {
+    height: 25px;
+  }
+  50% {
+    height: 5px;
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.05);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+.title {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  text-shadow: 0 0 10px #ff69b4;
+  z-index: 0;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff69b4;
+  }
+  to {
+    text-shadow:
+      0 0 20px #ff69b4,
+      0 0 30px #ff1493;
+  }
+}
+
+.instructions {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  z-index: 0;
+}
